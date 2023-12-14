@@ -7,11 +7,11 @@ export default function Home({ route }) {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.welcomeText}>Welcome, {email}</Text>
+        <Text style={styles.welcomeText}>Welcome to the Complex, {email}</Text>
       </View>
 
       
-      
+
     </View>
   );
 }
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   header: {
-    backgroundColor: '#e0e0e0',
+    // backgroundColor: '#e0e0e0',
     padding: 20,
     alignItems: 'center',
     justifyContent: 'center',
