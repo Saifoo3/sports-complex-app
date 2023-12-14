@@ -3,6 +3,7 @@
     "name": "sports-compapp",
     "slug": "sports-compapp",
     "version": "1.0.0",
+    "scheme": "sportscomplex",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -27,6 +28,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "5d206596-5afe-44a4-90a0-c360584651eb"
+      }
     }
   }
 }

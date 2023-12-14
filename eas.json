@@ -8,8 +8,7 @@
         "distribution": "internal"
       },
       "production": {
-        "node": "16.13.0"
+        "node": "21.1.0"
       }
     }
   }
-  
