@@ -1,12 +1,35 @@
-import { Text, View } from 'react-native'
-import React, { Component } from 'react'
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
-export default class Home extends Component {
-  render() {
-    return (
-      <View>
-        <Text>Home</Text>
+export default function Home({ route }) {
+  const { email } = route.params;
+
+  return (
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <Text style={styles.welcomeText}>Welcome, {email}</Text>
       </View>
-    )
-  }
+
+      
+      
+    </View>
+  );
 }
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  header: {
+    backgroundColor: '#e0e0e0',
+    padding: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  welcomeText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+
+});
+

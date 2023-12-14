@@ -61,14 +61,14 @@ export default function Login({ navigation }) {
         console.log('Password:', password);
         // Add your authentication logic, API calls, etc.
 
-        navigation.navigate('Home');
+        navigation.navigate('Home' ,{ email });
       };
   return (
     <View>
         <Image source={require('./../Assets/Images/login.png')}/>
         <View style={styles.container}>
             <Text style={styles.welcomeText}>Welcome to the Sports Complex</Text>
-            {/* <Text style={{textAlign:'center',marginTop:70,fontSize:23}}>Login/Signup</Text> */}
+            <Text style={{textAlign:'center',marginTop:70,fontSize:23}}>Login/Signup</Text>
             <TouchableOpacity style={styles.button} 
             onPress={()=>promptAsync()}>
               <Ionicons name="logo-google" size={24} 
@@ -77,10 +77,9 @@ export default function Login({ navigation }) {
             </TouchableOpacity>
             <Text style={{textAlign:'center',marginTop:1,fontSize:23}}>-or-</Text>
             
-                    {/* Email and Password Signup */}
         <TextInput
           style={styles.input}
-          placeholder="Email"
+          placeholder="Username"
           onChangeText={handleEmailChange}
           keyboardType="email-address"
           autoCapitalize="none"
