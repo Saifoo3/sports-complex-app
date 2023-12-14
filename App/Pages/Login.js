@@ -2,8 +2,16 @@ import { View, Text, Image, StyleSheet } from 'react-native'
 import React from 'react'
 import colours from '../Tempcolours/colours';
 import { Ionicons } from '@expo/vector-icons';
+import * as WebBrowser from 'expo-web-browser';
+import * as Google from 'expo-auth-session/providers/google';
 
 export default function Login() {
+  WebBrowser.maybeCompleteAuthSession();
+  const [request, response, promptAsync] = Google.useAuthRequest({
+    androidClientId: '722134148334-pvke7chr3p0hlutmdo02jrqq1l6tu9bh.apps.googleusercontent.com',
+    expoClientId:'722134148334-2e17cpd2a5i0kbs0u9vnro5g7mdsk4cq.apps.googleusercontent.com'
+
+  });
   return (
     <View>
         <Image source={require('./../Assets/Images/login.png')}/>
